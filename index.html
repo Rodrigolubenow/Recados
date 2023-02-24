@@ -1,61 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/recados/main.css">
-    <link rel="stylesheet" href="css/recados/button.css">
-    <link rel="stylesheet" href="css/recados/records.css">
-    <link rel="stylesheet" href="css/recados/modal.css">
-
-    <title>Painel de recados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
 </head>
 
 <body>
-    <header>
-        <h1 class="header-title">Painel com meus recados</h1>
-    </header>
-    <main>
-        <button type="button" class="button blue mobile" id="cadastrarRecados">Inserir novo recado.</button>
-        <table id="tbRecados" class="records">
-            <thead>
-                <tr>
-                    <th>Descrição</th>
-                    <th>Detalhamento</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
 
-            </tbody>
-        </table>
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <header class="modal-header">
-                    <h2>Novo Recado</h2>
-                    <span class="modal-close" id="modalClose">&#10006;</span>
-                </header>
-                <form id="form" class="modal-form">
-                    <input type="text" id="desc" data-index="new" class="modal-field" placeholder="Descrição" required>
-                    <input type="text" id="detal" class="modal-field" placeholder="Detalhamento" required>
+    <div class='container'>
+        <div class='card'>
+            <h1> Entrar </h1>
 
-                </form>
-                <footer class="modal-footer">
-                    <button id="salvar" class="button green">Salvar</button>
-                    <button id="cancelar" class="button blue">Cancelar</button>
-                </footer>
+            <div id='msgError'></div>
+
+            <div class='label-float'>
+                <input type='text' id='usuario' paceholder='' required>
+                <label id='userLabel' for='usuario'>Usuario</label>
             </div>
+
+            <div class='label-float'>
+                <input type='password' id='senha' paceholder='' required>
+                <label id='senhaLabel' for='senha'>Senha</label>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <div class='justify-center'>
+                <button onclick='entrar()'>Entrar</button>
+            </div>
+
+            <div class='justify-center'>
+                <hr>
+            </div>
+
+            <p> Não tem uma conta?
+                <a href='cadastro.html'> Cadastre-se </a>
+            </p>
+
         </div>
-    </main>
-    <footer>
-        Copyright &copy; Rodrigo Lubenow
-    </footer>
-    <script src="./js/index.js" defer></script>
+    </div>
 </body>
+<script src="./js/login.js"></script>
 
 </html>

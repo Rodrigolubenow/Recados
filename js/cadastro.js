@@ -98,8 +98,8 @@ function cadastrar() {
         msgError.innerHTML = ''
 
         setTimeout(() => {
-            window.location.href = 'login.html'
-        }, 3000)
+            window.location.href = 'index.html'
+        }, 2000)
 
 
     } else {
