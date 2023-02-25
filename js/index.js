@@ -67,7 +67,6 @@ const saveRecado = () => {
             closeModal()
             document.getElementById("desc").dataset.index = 'new'
         }
-
     }
 }
 //Criando Lista de recados
@@ -93,7 +92,6 @@ const updateTable = () => {
     dbRecados.forEach(createRow)
 
 }
-
 updateTable()
 const fillFields = (recados) => {
     document.getElementById('desc').value = recados.desc
