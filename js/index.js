@@ -65,7 +65,7 @@ const saveRecado = () => {
             updateRecados(index, recado)
             updateTable()
             closeModal()
-            document.getElementById("desc").dataset.index = 'new'
+            document.getElementById("desc").dataset.index = 'new';
         }
     }
 }
