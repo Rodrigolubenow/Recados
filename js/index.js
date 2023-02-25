@@ -65,6 +65,7 @@ const saveRecado = () => {
             updateRecados(index, recado)
             updateTable()
             closeModal()
+            document.getElementById("desc").dataset.index = 'new'
         }
 
     }
@@ -84,11 +85,13 @@ const createRow = (recados, index) => {
 const clearTable = () => {
     const rows = document.querySelectorAll('#tbRecados>tbody tr')
     rows.forEach(row => row.parentNode.removeChild(row))
+
 }
 const updateTable = () => {
     const dbRecados = readRecado()
     clearTable()
     dbRecados.forEach(createRow)
+
 }
 
 updateTable()
@@ -103,7 +106,9 @@ const editRecados = (index) => {
     const recados = readRecado()[index]
     recados.index = index
     fillFields(recados)
+    updateTable()
     openModal()
+
 }
 const editDelete = (event) => {
     if (event.target.type == 'button') {
